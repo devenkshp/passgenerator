@@ -2,23 +2,16 @@ html,
 body {
   height: 100%;
 }
-
 body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  justify-content: center;
 }
-
 .card-container {
-  margin: 0 auto;
   width: 350px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
-
 .form-input .form-control {
   position: relative;
   box-sizing: border-box;
@@ -42,6 +35,12 @@ body {
   resize: none;
   rows: 2;
 }
+label {
+  text-align: left;
+}
+.alert {
+  font-size: 0.8em;
+}
 #copy {
   opacity: 0.8;
 }
@@ -50,7 +49,6 @@ body {
   background-color: #f8f9fa;
   opacity: 1;
 }
-
 .input-group-append:hover:before {
   content: "COPY";
   display: block;
@@ -61,10 +59,14 @@ body {
   padding: 2px 8px;
   border-radius: 3px;
 }
-
-label {
-  text-align: left;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #f8f9fa;
+  padding-top: 12px;
 }
-.alert {
+footer .text-secondary {
   font-size: 0.8em;
 }
