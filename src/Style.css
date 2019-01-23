@@ -1,0 +1,70 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card-container {
+  margin: 0 auto;
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-input .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-input .form-control:focus {
+  z-index: 2;
+}
+.form-input input[type="number"] {
+  text-align: center;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-input button {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.input-group textarea {
+  resize: none;
+  rows: 2;
+}
+#copy {
+  opacity: 0.8;
+}
+#copy:hover {
+  cursor: pointer;
+  background-color: #f8f9fa;
+  opacity: 1;
+}
+
+.input-group-append:hover:before {
+  content: "COPY";
+  display: block;
+  background: #1d1d1d;
+  color: #ffffff;
+  position: absolute;
+  font-size: 0.6em;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+label {
+  text-align: left;
+}
+.alert {
+  font-size: 0.8em;
+}
