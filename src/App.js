@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/js/bootstrap.js";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 import "./Style.css";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Result from "./components/Result";
+import Modal from "./components/Modal";
 
 library.add(faClipboard);
 
@@ -14,20 +16,20 @@ class App extends Component {
     super(props);
     this.state = { value: null, password: "", warnMsg: "", succMsg: "" };
 
-    this.handleChange = this.handleChange.bind(this);
     this.generatePass = this.generatePass.bind(this);
     this.handleCopy = this.handleCopy.bind(this);
   }
 
-  handleChange(e) {
-    this.setState({ value: e.target.value });
-  }
+  handleChange = e => {
+    this.setState({ value: e.target.value, warnMsg: "", succMsg: "" });
+  };
 
   generatePass() {
     let length = this.state.value;
     let pass = "";
-    if (length < 6 || length > 30) {
+    if (length < 6 || length > 32) {
       this.setState({
+        value: null,
         password: "",
         warnMsg: "Please enter a number between 6 and 30",
         succMsg: ""
@@ -48,38 +50,40 @@ class App extends Component {
     }
   }
 
-  selectPass() {
+  selectPass = () => {
     let e = document.getElementById("pass");
     e.select();
-  }
+  };
 
   handleCopy() {
     if (this.state.password !== "") {
       this.selectPass();
       document.execCommand("copy");
-      this.setState({ succMsg: "Password copied successfully!" });
+      this.setState({ succMsg: "Password copied successfully!", warnMsg: "" });
     } else {
-      this.setState({ succMsg: "Please generate password first!" });
+      this.setState({
+        warnMsg: "Please generate password first!",
+        succMsg: ""
+      });
     }
   }
 
   render() {
     return (
-      <div className="card-container">
-        <div className="card text-center">
-          <Header />
-          <Form
-            handleChange={this.handleChange}
-            generatePass={this.generatePass}
-            warnMsg={this.state.warnMsg}
-          />
-          <Result
-            pass={this.state.password}
-            onCopy={this.handleCopy}
-            selectPass={this.selectPass}
-            succMsg={this.state.succMsg}
-          />
-        </div>
+      <div className="card text-center">
+        {this.state.warnMsg !== "" || this.state.succMsg !== "" ? (
+          <Modal warnMsg={this.state.warnMsg} succMsg={this.state.succMsg} />
+        ) : null}
+        <Header />
+        <Form
+          handleChange={this.handleChange}
+          generatePass={this.generatePass}
+        />
+        <Result
+          pass={this.state.password}
+          onCopy={this.handleCopy}
+          selectPass={this.selectPass}
+        />
       </div>
     );
   }

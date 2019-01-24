@@ -8,9 +8,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   justify-content: center;
-}
-.card-container {
-  width: 350px;
+  text-align: center;
 }
 .form-input .form-control {
   position: relative;
@@ -64,9 +62,30 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: #f8f9fa;
   padding-top: 12px;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 footer .text-secondary {
   font-size: 0.8em;
+}
+.alert {
+  width: 85%;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  opacity: 0;
+  animation: exit 3s ease-out;
+}
+@keyframes exit {
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

@@ -2,15 +2,9 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Result extends Component {
-  state = {};
   render() {
     return (
       <div className="card-footer py-4">
-        {this.props.succMsg !== "" ? (
-          <p className="text-success alert py-0">{this.props.succMsg}</p>
-        ) : (
-          false
-        )}
         <div className="input-group">
           <textarea
             type="text"

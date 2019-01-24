@@ -17,11 +17,11 @@ class Form extends Component {
           className="form-control"
           type="number"
           min="6"
-          max="30"
+          max="32"
           id="length"
           required
           autoFocus={true}
-          placeholder="Between 6 and 30"
+          placeholder="Between 6 and 32"
           value={this.props.value}
           onChange={this.props.handleChange}
         />
