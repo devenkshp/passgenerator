@@ -34,6 +34,7 @@ class App extends Component {
         warnMsg: "Please enter a number between 6 and 30",
         succMsg: ""
       });
+      setTimeout(() => this.setState({ warnMsg: "", succMsg: "" }), 3000);
     } else {
       for (let i = 0; i < length; i++) {
         let random = Math.round(Math.random() * 126 + 33);
@@ -66,6 +67,7 @@ class App extends Component {
         succMsg: ""
       });
     }
+    setTimeout(() => this.setState({ warnMsg: "", succMsg: "" }), 3000);
   }
 
   render() {
