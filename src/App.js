@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/js/bootstrap.js";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 import "./Style.css";

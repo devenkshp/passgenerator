@@ -5,10 +5,13 @@ body {
 body {
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
+}
+#root {
+  margin: auto;
 }
 .form-input .form-control {
   position: relative;
@@ -58,7 +61,8 @@ label {
   border-radius: 3px;
 }
 footer {
-  position: absolute;
+  align-self: flex-end;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
   text-align: center;
