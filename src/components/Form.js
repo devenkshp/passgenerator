@@ -8,11 +8,6 @@ class Form extends Component {
           Enter the length of your password
           <br /> &amp; hit the generate button
         </p>
-        {this.props.warnMsg !== "" ? (
-          <p className="text-danger alert m-0">{this.props.warnMsg}</p>
-        ) : (
-          false
-        )}
         <input
           className="form-control"
           type="number"

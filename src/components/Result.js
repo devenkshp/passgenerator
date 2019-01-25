@@ -11,7 +11,7 @@ class Result extends Component {
             readOnly={true}
             className="form-control"
             id="pass"
-            placeholder="Find Your Password Here!"
+            placeholder="Find your password here!"
             aria-describedby="copy"
             value={this.props.pass}
             onClick={this.props.selectPass}
