@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AppFooter from "./components/AppFooter";
 import App from "./App";
+import AppFooter from "./components/AppFooter";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(<App />, document.getElementById("root"));

@@ -13,6 +13,9 @@ body {
 #root {
   margin: auto;
 }
+.card {
+  margin: 20px auto;
+}
 .form-input .form-control {
   position: relative;
   box-sizing: border-box;

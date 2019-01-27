@@ -20,7 +20,12 @@ class App extends Component {
   }
 
   handleChange = e => {
-    this.setState({ value: e.target.value, warnMsg: "", succMsg: "" });
+    this.setState({
+      value: e.target.value,
+      password: "",
+      warnMsg: "",
+      succMsg: ""
+    });
   };
 
   generatePass() {
