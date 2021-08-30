@@ -35,7 +35,7 @@ class App extends Component {
       this.setState({
         value: null,
         password: "",
-        warnMsg: "Please enter a number between 6 and 30",
+        warnMsg: "Please enter a number between 6 and 32",
         succMsg: ""
       });
       setTimeout(() => this.setState({ warnMsg: "", succMsg: "" }), 3000);

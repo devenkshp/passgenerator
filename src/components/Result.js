@@ -16,7 +16,7 @@ class Result extends Component {
             value={this.props.pass}
             onClick={this.props.selectPass}
           />
-          <div className="input-group-append">
+          <div className="input-group-append" title="Copy password.">
             <span
               className="input-group-text"
               id="copy"

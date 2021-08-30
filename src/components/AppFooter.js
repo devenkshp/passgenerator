@@ -1,7 +1,7 @@
 import React from "react";
 
 function AppFooter() {
-  return <p className="text-secondary">@devenkshp</p>;
+  return <p>@devenkshp</p>;
 }
 
 export default AppFooter;

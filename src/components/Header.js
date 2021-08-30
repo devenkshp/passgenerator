@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <header className="card-header p-4">
-        <h2 className="text-secondary">
+        <h2 className="text-white">
           Random Password <br />
           Generator
         </h2>

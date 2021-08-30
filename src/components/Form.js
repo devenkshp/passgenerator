@@ -4,9 +4,9 @@ class Form extends Component {
   render() {
     return (
       <form className="form-input my-4 px-4">
-        <p>
+        <p className="text-white">
           Enter the length of your password
-          <br /> &amp; hit the generate button
+          <br /> &amp; press the Generate button
         </p>
         <input
           className="form-control"
@@ -24,6 +24,7 @@ class Form extends Component {
           type="button"
           id="guess"
           className="btn btn-lg btn-success btn-block"
+          title="Click to generate password."
           onClick={this.props.generatePass}
         >
           Generate

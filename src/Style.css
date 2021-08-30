@@ -9,12 +9,21 @@ body {
   -ms-flex-align: center;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 #root {
   margin: auto;
 }
 .card {
   margin: 20px auto;
+  background: rgba(64, 102, 165, 0.8);
+  border: 1px solid rgba(64, 102, 165, 1);
+}
+.card-header,
+.card-footer {
+  background: rgba(64, 102, 165, 0.5);
 }
 .form-input .form-control {
   position: relative;
@@ -27,6 +36,8 @@ body {
   z-index: 2;
 }
 .form-input input[type="number"] {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000000;
   text-align: center;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -36,6 +47,8 @@ body {
   border-top-left-radius: 0;
 }
 .input-group textarea {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(64, 102, 165, 0.8);
   resize: none;
   rows: 2;
 }
@@ -46,6 +59,7 @@ label {
   font-size: 0.8em;
 }
 #copy {
+  color: rgba(64, 102, 165, 1);
   opacity: 0.8;
 }
 #copy:hover {
@@ -53,27 +67,18 @@ label {
   background-color: #f8f9fa;
   opacity: 1;
 }
-.input-group-append:hover:before {
-  content: "COPY";
-  display: block;
-  background: #1d1d1d;
-  color: #ffffff;
-  position: absolute;
-  font-size: 0.6em;
-  padding: 2px 8px;
-  border-radius: 3px;
-}
 footer {
   align-self: flex-end;
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
-  text-align: center;
-  padding-top: 12px;
-  background-color: rgba(0, 0, 0, 0.03);
+  padding-top: 10px;
+  background-color: rgba(64, 102, 165, 0.6);
+  border-top: 1px solid rgba(64, 102, 165, 1);
 }
-footer .text-secondary {
+footer p {
   font-size: 0.8em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
 }
 .alert {
   width: 85%;
